@@ -1,2 +1,4 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- pages/home/home.wxml -->
+<w-swiper images="{{banners}}"></w-swiper>
+<recommend recommends="{{recommends}}"></recommend>
+<feature></feature>

@@ -1,0 +1,12 @@
+<!--pages/home/chidComps/recommend.wxml-->
+<!-- <text>pages/home/chidComps/recommend.wxml</text> -->
+
+<view class="recommend" hover-class="none" hover-stop-propagation="false">
+  <block wx:for="{{recommends}}" wx:key="index">
+    <view class="recommend-item" hover-class="none" hover-stop-propagation="false">
+      <image src="{{item.image}}" ></image>
+      <view><text>{{item.title}}</text></view>
+    </view>
+    
+  </block>
+</view>

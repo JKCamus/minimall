@@ -1,0 +1,5 @@
+/* pages/home/chidComps/feature/feature.wxss */
+.feature image {
+  width: 100%;
+  /* height: 100%; */
+}

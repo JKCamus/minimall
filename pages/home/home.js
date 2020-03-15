@@ -1,3 +1,6 @@
+import {
+  getMultiData
+} from '../../service/home.js'
 // pages/home/home.js
 Page({
 
@@ -5,14 +8,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    banners: [],
+    recommends: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 获取轮播图以及推荐数据
+    getMultiData().then(res => {
+      console.log(res);
+      const banners = res.data.data.banner.list
+      const recommends = res.data.data.recommend.list
+      //将banners和recommends存入data中
+      this.setData({
+        banners,
+        recommends
+      })
 
+    })
   },
 
   /**

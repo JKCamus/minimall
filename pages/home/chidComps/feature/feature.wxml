@@ -1,0 +1,6 @@
+<!-- pages/home/chidComps/feature/feature.wxml -->
+<view class="feature">
+  <image src="/assets/images/home/recommend_bg.jpg" mode="widthFix"></image>
+</view>
+
+  
