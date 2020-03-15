@@ -2,3 +2,4 @@
 <w-swiper images="{{banners}}"></w-swiper>
 <recommend recommends="{{recommends}}"></recommend>
 <feature></feature>
+<tab-control class="tab-control" titles="{{titles}}" bind:tabClick="tabClick"></tab-control>

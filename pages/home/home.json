@@ -2,7 +2,10 @@
   "usingComponents": {
      "w-swiper":"../../components/w-swiper/w-swiper",
      "recommend":"./chidComps/recommend/recommend",
-     "feature":"./chidComps/feature/feature"
+     "feature":"./chidComps/feature/feature",
+     "tab-control":"../../components/w-tab-control/w-tab-control"
+
+
 
   }
 }
