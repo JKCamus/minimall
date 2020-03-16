@@ -3,3 +3,4 @@
 <recommend recommends="{{recommends}}"></recommend>
 <feature></feature>
 <tab-control class="tab-control" titles="{{titles}}" bind:tabClick="tabClick"></tab-control>
+<w-goods goodslist="{{goods[currentType].list}}"></w-goods>

@@ -3,7 +3,8 @@
      "w-swiper":"../../components/w-swiper/w-swiper",
      "recommend":"./chidComps/recommend/recommend",
      "feature":"./chidComps/feature/feature",
-     "tab-control":"../../components/w-tab-control/w-tab-control"
+     "tab-control":"../../components/w-tab-control/w-tab-control",
+     "w-goods":"../../components/w-goods/w-goods"
 
 
 

@@ -9,6 +9,8 @@ import {
   NEW,
   BACK_TOP_POSITION
 } from '../../common/const.js'
+
+const types = [POP, NEW, SELL]
 Page({
 
   /**
@@ -96,8 +98,16 @@ Page({
 
   },
   tabClick(event) {
-    console.log(event);
-
+    // ！console.log(event);
+    // 取出index
+    const index = event.detail.index
+    // console.log(index);
+    // 设置currentType
+    // const type=types[index]
+    // 与设置的types一对一
+    this.setData({
+      currentType: types[index]
+    })
   },
 
   /* 请求swiper数据 */
