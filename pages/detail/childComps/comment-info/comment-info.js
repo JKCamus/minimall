@@ -1,10 +1,12 @@
-// pages/detail/childComps/comment-info/comment -info.js
+// pages/detail/childComps/comment-info/comment-info.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-
+    commentInfo:{
+      type:Object
+    }
   },
 
   /**
