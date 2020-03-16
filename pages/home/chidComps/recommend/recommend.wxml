@@ -4,7 +4,7 @@
 <view class="recommend" hover-class="none" hover-stop-propagation="false">
   <block wx:for="{{recommends}}" wx:key="index">
     <view class="recommend-item" hover-class="none" hover-stop-propagation="false">
-      <image src="{{item.image}}" ></image>
+      <image src="{{item.image}}" bind:load="onImageLoad"></image>
       <view><text>{{item.title}}</text></view>
     </view>
     

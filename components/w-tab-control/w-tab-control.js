@@ -23,6 +23,8 @@ Component({
   methods: {
     itemClick(event) {
       // 修改currentIndex
+      // console.log("===");
+
       this.setData({
         // 取出index
         currentIndex: event.currentTarget.dataset.index

@@ -1,8 +1,16 @@
 <!-- pages/home/home.wxml -->
 <w-swiper images="{{banners}}"></w-swiper>
-<recommend recommends="{{recommends}}"></recommend>
+<recommend recommends="{{recommends}}" bind:imageLoad="onImageLoad"></recommend>
 <feature></feature>
-<tab-control class="tab-control" titles="{{titles}}" bind:tabClick="tabClick"></tab-control>
-<w-goods goodslist="{{goods[currentType].list}}" ></w-goods>
+<tab-control titles="{{titles}}" class="tab-control" bind:tabClick="tabClick"></tab-control>
+
+<view hidden="{{!showTabControl}}">
+  <tab-control titles="{{titles}}"  class="tab-control-temp" bind:tabClick="tabClick"></tab-control>
+  <!-- 这里不能用wx:if,会导致不渲染这个临时tabcontrol节点，导致后面的不能获取节点中的setCurrentIndex方法 -->
+  <!-- <tab-control titles="{{titles}}" wx:if="{{showTabControl}}" class="tab-control-temp" bind:tabClick="tabClick"></tab-control> -->
+</view>
+  
+
+<w-goods goodslist="{{goods[currentType].list}}"></w-goods>
 <!-- 回到顶部hiden:hiden对自定义组件无效 -->
 <w-back-top bind:tap="onBackTop" wx:if="{{showBackTop}}"></w-back-top>

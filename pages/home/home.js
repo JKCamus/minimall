@@ -35,7 +35,9 @@ Page({
       }
     },
     currentType: 'pop',
-    showBackTop: false
+    showBackTop: false,
+    showTabControl: false,
+    tabControlTop: 0
 
   },
 
@@ -100,16 +102,24 @@ Page({
 
   },
   tabClick(event) {
-    // ！console.log(event);
+    // console.log(event);
     // 取出index
     const index = event.detail.index
     // console.log(index);
     // 设置currentType
-    // const type=types[index]
     // 与设置的types一对一
     this.setData({
       currentType: types[index]
     })
+    // console.log(event);
+    console.log(this.selectComponent('.tab-control-temp'));
+    console.log(this.selectComponent('.tab-control'));
+
+    // this.selectComponent('.tab-control').setCurrentIndex(index)
+    this.selectComponent('.tab-control').setCurrentIndex(index)
+    this.selectComponent('.tab-control-temp').setCurrentIndex(index)
+
+    
   },
   // 到达底部，上拉加载更多，wx原装方法
   onReachBottom() {
@@ -122,24 +132,39 @@ Page({
   },
   onPageScroll(option) {
 
-     /* backTop按钮的显示和隐藏 */
+    /* backTop按钮的显示和隐藏 */
     // console.log(option);
     //1.取出scrollTop
     const scrollTop = option.scrollTop
     // 2.修改showBackTop属性
     // 不要频繁在滚动回调中频繁调用this.setData
     // console.log(scrollTop);
-    
-    const flag1=scrollTop >= BACK_TOP_POSITION
-    if(flag1!=this.data.showBackTop){
+
+    const flag1 = scrollTop >= BACK_TOP_POSITION
+    if (flag1 != this.data.showBackTop) {
       this.setData({
         showBackTop: flag1
         // console.log("111");
-        
       })
     }
- 
-
+    // 根据tabcontrol的位置修改showTabControl的属性，隐藏的tabControl的显隐性
+    const flag2 = scrollTop >= this.data.tabControlTop
+    if (flag2 != this.data.showTabControl) {
+      this.setData({
+        showTabControl: flag2
+      })
+    }
+  },
+  onImageLoad() {
+    console.log("图片加载完成");
+    /* ------------自定义组件。#tab-control节点选择器，exec()为调用一次，返回对象实例，top（选择节点的上边界坐标）----------------- */
+    wx.createSelectorQuery().select('.tab-control').boundingClientRect(rect => {
+      // console.log(rect);
+      // this.data.tabControlTop = rect.top
+      this.setData({
+        tabControlTop: rect.top
+      })
+    }).exec();
   },
 
   /* ----------请求数据相关----------- */
