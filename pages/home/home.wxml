@@ -3,4 +3,6 @@
 <recommend recommends="{{recommends}}"></recommend>
 <feature></feature>
 <tab-control class="tab-control" titles="{{titles}}" bind:tabClick="tabClick"></tab-control>
-<w-goods goodslist="{{goods[currentType].list}}"></w-goods>
+<w-goods goodslist="{{goods[currentType].list}}" ></w-goods>
+<!-- 回到顶部hiden:hiden对自定义组件无效 -->
+<w-back-top bind:tap="onBackTop" wx:if="{{showBackTop}}"></w-back-top>

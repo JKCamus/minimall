@@ -34,7 +34,8 @@ Page({
         list: []
       }
     },
-    currentType: 'pop'
+    currentType: 'pop',
+    showBackTop: false
 
   },
 
@@ -110,7 +111,38 @@ Page({
       currentType: types[index]
     })
   },
+  // 到达底部，上拉加载更多，wx原装方法
+  onReachBottom() {
+    console.log("底部");
+    // 上拉加载更多
+    this._getGoods(this.data.currentType)
+  },
+  onBackTop() {
 
+  },
+  onPageScroll(option) {
+
+     /* backTop按钮的显示和隐藏 */
+    // console.log(option);
+    //1.取出scrollTop
+    const scrollTop = option.scrollTop
+    // 2.修改showBackTop属性
+    // 不要频繁在滚动回调中频繁调用this.setData
+    // console.log(scrollTop);
+    
+    const flag1=scrollTop >= BACK_TOP_POSITION
+    if(flag1!=this.data.showBackTop){
+      this.setData({
+        showBackTop: flag1
+        // console.log("111");
+        
+      })
+    }
+ 
+
+  },
+
+  /* ----------请求数据相关----------- */
   /* 请求swiper数据 */
   _getMultiData() {
     getMultiData().then(res => {
@@ -122,7 +154,6 @@ Page({
         banners,
         recommends
       })
-
     })
   },
   /* 请求goods数据获*/
@@ -147,11 +178,4 @@ Page({
       })
     })
   },
-
-  // 到达底部，上拉加载更多，wx原装方法
-  onReachBottom() {
-    console.log("底部");
-    // 上拉加载更多
-    this._getGoods(this.data.currentType)
-  }
 })

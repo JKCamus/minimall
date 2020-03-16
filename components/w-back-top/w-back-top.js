@@ -18,6 +18,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    // 点击回到顶部
+    backTop(){
+      // console.log("----");
+      wx.pageScrollTo({
+        scrollTop: 0,
+        duration: 300
+      });
+    }
   }
 })
