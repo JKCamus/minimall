@@ -1,3 +1,11 @@
+import {
+  getDetail,
+  getRecommends,
+  GoodsBaseInfo,
+  ShopInfo,
+  ParamInfo,
+} from "../../service/detail"
+
 // pages/detail/detail.js
 Page({
 
@@ -5,16 +13,59 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    iid: '',
+    topImages: [],
+    baseInfo: {},
+    shopInfo: {},
+    detailInfo: {},
+    paramInfo: {},
+    commentInfo: {},
+    recommends: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // 1.获取传入的id
+    this.setData({
+      iid: options.iid
+    })
+    this._getDetailData()
   },
+  /* 获取详情页基本数据 */
+  _getDetailData() {
+    getDetail(this.data.iid).then(res => {
+      // console.log(res);
+      const data = res.result;
+      // console.log(res.result);
+      // 1.取出顶部的轮播图片
+      const topImages = data.itemInfo.topImages
+      // 2.创建BaseInfo对象
+      const baseInfo = new GoodsBaseInfo(data.itemInfo, data.columns, data.shopInfo.services)
+      // console.log(baseInfo);
+      // 3.创建ShopInfo对象
+      const shopInfo = new ShopInfo(data.shopInfo);
+      // 4.获取detailInfo信息
+      const detailInfo = data.detailInfo;
+      // 5.创建ParamInfo对象
+      const paramInfo = new ParamInfo(data.itemParams.info, data.itemParams.rule)
+      // 6.获取评论信息
+      let commentInfo = {}
+      if (data.rate && data.rate.cRate > 0) {
+        commentInfo = data.rate.list[0]
+      }
 
+      this.setData({
+        topImages: topImages,
+        baseInfo: baseInfo,
+        shopInfo: shopInfo,
+        detailInfo: detailInfo,
+        paramInfo: paramInfo,
+        commentInfo: commentInfo
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

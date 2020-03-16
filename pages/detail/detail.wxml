@@ -1,2 +1,5 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<!-- <text>pages/detail/detail.wxml</text> -->
+<w-swiper images="{{topImages}}"class="d-swiper"></w-swiper>
+<base-info></base-info>
+  

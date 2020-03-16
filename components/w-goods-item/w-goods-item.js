@@ -4,9 +4,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    goodsitem:{
-      type:Object,
-      value:{}
+    goodsitem: {
+      type: Object,
+      value: {}
     }
   },
 
@@ -21,6 +21,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    // 点击goodsitem路由跳转
+    itemClick(event) {
+      const iid = this.data.goodsitem.iid
+      // console.log(iid);
+      
+      wx.navigateTo({
+        url: '/pages/detail/detail?iid=' + iid
+      })
+    }
   }
 })

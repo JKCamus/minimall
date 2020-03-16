@@ -119,7 +119,7 @@ Page({
     this.selectComponent('.tab-control').setCurrentIndex(index)
     this.selectComponent('.tab-control-temp').setCurrentIndex(index)
 
-    
+
   },
   // 到达底部，上拉加载更多，wx原装方法
   onReachBottom() {
@@ -156,7 +156,7 @@ Page({
     }
   },
   onImageLoad() {
-    console.log("图片加载完成");
+    // console.log("图片加载完成");
     /* ------------自定义组件。#tab-control节点选择器，exec()为调用一次，返回对象实例，top（选择节点的上边界坐标）----------------- */
     wx.createSelectorQuery().select('.tab-control').boundingClientRect(rect => {
       // console.log(rect);
@@ -172,8 +172,10 @@ Page({
   _getMultiData() {
     getMultiData().then(res => {
       // console.log(res);
-      const banners = res.data.data.banner.list
-      const recommends = res.data.data.recommend.list
+      const banners = res.data.banner.list.map(item=>{
+        return item.image
+      })
+      const recommends = res.data.recommend.list
       //将banners和recommends存入data中
       this.setData({
         banners,
@@ -189,7 +191,7 @@ Page({
     // 2.请求数据
     getGoods(type, page).then(res => {
       // 1.取出数据
-      const list = res.data.data.list;
+      const list = res.data.list;
       // console.log(res);
 
       // 2.将数据临时获取
