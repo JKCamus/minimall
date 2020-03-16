@@ -49,6 +49,7 @@ Page({
     this._getGoods(SELL)
   },
 
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -145,5 +146,12 @@ Page({
         goods: goods
       })
     })
+  },
+
+  // 到达底部，上拉加载更多，wx原装方法
+  onReachBottom() {
+    console.log("底部");
+    // 上拉加载更多
+    this._getGoods(this.data.currentType)
   }
 })
