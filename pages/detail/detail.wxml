@@ -4,3 +4,4 @@
 <base-info class="base-info" baseInfo="{{baseInfo}}"></base-info>
 <shop-info class="shop-info" shopInfo="{{shopInfo}}"></shop-info>
 <detail-info class="detail-info" detailInfo="{{detailInfo}}"></detail-info>
+<param-info class="param-info" paramInfo="{{paramInfo}}"></param-info>
