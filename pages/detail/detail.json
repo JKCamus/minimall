@@ -2,7 +2,9 @@
   "usingComponents": {
     "w-swiper":"../../components/w-swiper/w-swiper",
      "base-info":"./childComps/base-info/base-info",
-     "shop-info":"./childComps/shop-info/shop-info"
+     "shop-info":"./childComps/shop-info/shop-info",
+     "detail-info":"./childComps/detail-info/detail-info"
+
 
 
   }
