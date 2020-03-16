@@ -6,7 +6,8 @@
      "detail-info":"./childComps/detail-info/detail-info",
      "param-info":"./childComps/param-info/param-info",
      "comment-info":"./childComps/comment-info/comment-info",
-     "recommend-info":"./childComps/recommend-info/recommend-info"
+     "recommend-info":"./childComps/recommend-info/recommend-info",
+     "w-back-top":"../../components/w-back-top/w-back-top"
 
 
 

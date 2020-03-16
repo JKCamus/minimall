@@ -5,6 +5,9 @@ import {
   ShopInfo,
   ParamInfo,
 } from "../../service/detail"
+import {
+  BACK_TOP_POSITION
+} from '../../common/const.js'
 
 // pages/detail/detail.js
 Page({
@@ -20,7 +23,9 @@ Page({
     detailInfo: {},
     paramInfo: {},
     commentInfo: {},
-    recommends: {}
+    recommends: {},
+    showBackTop: false
+
   },
 
   /**
@@ -78,6 +83,29 @@ Page({
       
     })
   },
+  onPageScroll(option) {
+
+    /* backTop按钮的显示和隐藏 */
+    // console.log(option);
+    //1.取出scrollTop
+    const scrollTop = option.scrollTop
+    // 2.修改showBackTop属性
+    // 不要频繁在滚动回调中频繁调用this.setData
+    // console.log(scrollTop);
+
+    const flag1 = scrollTop >= BACK_TOP_POSITION
+    if (flag1 != this.data.showBackTop) {
+      this.setData({
+        showBackTop: flag1
+        // console.log("111");
+      })
+    }
+  },
+
+
+
+
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

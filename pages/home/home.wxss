@@ -1,7 +1,9 @@
 /* pages/home/home.wxss */
 .home {
   height: 100%;
-}.tab-control-temp {
+}
+
+.tab-control-temp {
   position: fixed;
   left: 0;
   right: 0;

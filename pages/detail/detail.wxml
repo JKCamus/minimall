@@ -7,3 +7,4 @@
 <param-info class="param-info" paramInfo="{{paramInfo}}"></param-info>
 <comment-info class="comment-info" commentInfo="{{commentInfo}}"></comment-info> 
 <recommend-info class="recommend-info" recommends="{{recommends}}"></recommend-info>
+<w-back-top bind:tap="onBackTop" wx:if="{{showBackTop}}"></w-back-top>
