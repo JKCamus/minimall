@@ -2,3 +2,4 @@
 <!-- <text>pages/detail/detail.wxml</text> -->
 <w-swiper images="{{topImages}}"class="d-swiper"></w-swiper>
 <base-info class="base-info" baseInfo="{{baseInfo}}"></base-info>
+<shop-info class="shop-info" shopInfo="{{shopInfo}}"></shop-info>
