@@ -6,3 +6,4 @@
 <detail-info class="detail-info" detailInfo="{{detailInfo}}"></detail-info>
 <param-info class="param-info" paramInfo="{{paramInfo}}"></param-info>
 <comment-info class="comment-info" commentInfo="{{commentInfo}}"></comment-info> 
+<recommend-info class="recommend-info" recommends="{{recommends}}"></recommend-info>

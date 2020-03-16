@@ -32,6 +32,7 @@ Page({
       iid: options.iid
     })
     this._getDetailData()
+    this._getRecommends()
   },
   /* 获取详情页基本数据 */
   _getDetailData() {
@@ -64,6 +65,17 @@ Page({
         paramInfo: paramInfo,
         commentInfo: commentInfo
       })
+    })
+  },
+  /* 获取详情页推荐数据 */
+  _getRecommends() {
+    getRecommends().then(res => {
+      // console.log(res.data.list);
+      
+      this.setData({
+        recommends: res.data.list
+      })
+      
     })
   },
   /**

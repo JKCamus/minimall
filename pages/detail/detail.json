@@ -5,7 +5,9 @@
      "shop-info":"./childComps/shop-info/shop-info",
      "detail-info":"./childComps/detail-info/detail-info",
      "param-info":"./childComps/param-info/param-info",
-     "comment-info":"./childComps/comment-info/comment-info"
+     "comment-info":"./childComps/comment-info/comment-info",
+     "recommend-info":"./childComps/recommend-info/recommend-info"
+
 
 
 
