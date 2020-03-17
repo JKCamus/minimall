@@ -13,4 +13,4 @@
 
 <w-goods goodslist="{{goods[currentType].list}}"></w-goods>
 <!-- 回到顶部hiden:hiden对自定义组件无效 -->
-<w-back-top bind:tap="onBackTop" wx:if="{{showBackTop}}"></w-back-top>
+<w-back-top bind:tap="onBackTop" wx:if="{{showBackTop}}" class="back-top"></w-back-top>

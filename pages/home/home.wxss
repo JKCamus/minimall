@@ -11,3 +11,8 @@
   z-index: 9;
   background: #fff;
 }
+.back-top {
+  position: fixed;
+  right: 40rpx;
+  bottom: 40rpx;
+}

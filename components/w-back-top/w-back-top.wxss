@@ -1,9 +1,10 @@
 /* components/w-back-top/w-back-top.wxss */
-.back-top {
+/* .back-top {
   position: fixed;
+  各组件内距离自己设置
   right: 20rpx;
-  bottom: 20rpx;
-}
+  bottom: 200rpx;
+} */
 
 .back-top image {
   width: 90rpx;

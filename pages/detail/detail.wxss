@@ -2,3 +2,8 @@
 .d-swiper swiper {
   height: 800rpx;
 }
+.back-top {
+  position: fixed;
+  right: 36rpx;
+  bottom: 150rpx;
+}
