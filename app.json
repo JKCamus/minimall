@@ -4,7 +4,10 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/category/category",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/cart/cart",
+    "pages/profile/profile"
+    
 
   ],
   "window": {
@@ -35,13 +38,13 @@
         "selectedIconPath": "/assets/images/tabbar/category_active.png"
       },
       {
-        "pagePath": "pages/category/category",
+        "pagePath": "pages/cart/cart",
         "text": "购物车",
         "iconPath": "/assets/images/tabbar/cart.png",
         "selectedIconPath": "/assets/images/tabbar/cart_active.png"
       },
       {
-        "pagePath": "pages/category/category",
+        "pagePath": "pages/profile/profile",
         "text": "我的",
         "iconPath": "/assets/images/tabbar/profile.png",
         "selectedIconPath": "/assets/images/tabbar/profile_active.png"

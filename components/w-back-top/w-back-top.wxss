@@ -1,8 +1,8 @@
 /* components/w-back-top/w-back-top.wxss */
 .back-top {
   position: fixed;
-  right: 16rpx;
-  bottom: 10rpx;
+  right: 20rpx;
+  bottom: 20rpx;
 }
 
 .back-top image {

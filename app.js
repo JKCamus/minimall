@@ -33,7 +33,24 @@ App({
       }
     })
   },
+  addToCart(obj) {
+    const oldInfo = this.globalData.cartList.find((item) => item.iid === obj.iid)
+    if (oldInfo) {
+      oldInfo.count += 1
+      // console.log("商品数量+1");
+    } else {
+      obj.count = 1
+      obj.checked = true
+      this.globalData.cartList.push(obj)
+      // console.log("新商品");
+    }
+    // 2.购物车回调
+    if (this.addCartCallback) {
+      this.addCartCallback()
+    }
+  },
   globalData: {
-    userInfo: null
+    userInfo: null,
+      cartList: []
   }
 })

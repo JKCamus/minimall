@@ -112,8 +112,8 @@ Page({
       currentType: types[index]
     })
     // console.log(event);
-    console.log(this.selectComponent('.tab-control-temp'));
-    console.log(this.selectComponent('.tab-control'));
+    // console.log(this.selectComponent('.tab-control-temp'));
+    // console.log(this.selectComponent('.tab-control'));
 
     // this.selectComponent('.tab-control').setCurrentIndex(index)
     this.selectComponent('.tab-control').setCurrentIndex(index)

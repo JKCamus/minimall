@@ -8,6 +8,7 @@ import {
 import {
   BACK_TOP_POSITION
 } from '../../common/const.js'
+const app = getApp()
 
 // pages/detail/detail.js
 Page({
@@ -76,11 +77,11 @@ Page({
   _getRecommends() {
     getRecommends().then(res => {
       // console.log(res.data.list);
-      
+
       this.setData({
         recommends: res.data.list
       })
-      
+
     })
   },
   onPageScroll(option) {
@@ -101,7 +102,20 @@ Page({
       })
     }
   },
-
+  onAddCart() {
+    // 1.获取购物车需要展示的商品的信息
+    // console.log("====");
+    
+    const obj = {}
+    obj.iid = this.data.iid;
+    obj.imageURL = this.data.topImages[0];
+    obj.title = this.data.baseInfo.title;
+    obj.desc = this.data.baseInfo.desc;
+    obj.price = this.data.baseInfo.realPrice;
+    // 2.加入购物车
+    app.addToCart(obj)
+    console.log("detail");
+  },
 
 
 

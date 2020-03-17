@@ -36,7 +36,7 @@ Component({
       this.triggerEvent("tabClick", data, {})
     },
     setCurrentIndex(index) {
-      console.log(index);
+      // console.log(index);
       this.setData({
         currentIndex: index
       })
