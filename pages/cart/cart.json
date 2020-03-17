@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "cart-list-item":"./childComps/cart-list-item/cart-list-item"
+    "cart-list-item":"./childComps/cart-list-item/cart-list-item",
+    "bottom-bar":"./childComps/bottom-bar/bottom-bar"
+
   }
 }

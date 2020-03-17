@@ -1,12 +1,18 @@
-// components/w-check-icon/w-check-icon.js
+// pages/cart/childComps/bottom-bar/bottom-bar.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    isChecked: {
+    selected: {
       type: Boolean,
-      value: false
+      value: true
+    },
+    price: {
+      type: Number
+    },
+    counter: {
+      type: Number
     }
   },
 
@@ -20,7 +26,7 @@ Component({
   /**
    * 组件的方法列表
    */
-  externalClasses: ["icon"],
   methods: {
+
   }
 })
