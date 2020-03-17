@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    
+    "header":"./childComps/header/header",
+    "info":"./childComps/info/info",
+    "list-view":"./childComps/list-view/list-view"
   },
   "navigationBarTitleText": "我的"
 
