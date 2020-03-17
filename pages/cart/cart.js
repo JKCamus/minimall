@@ -5,7 +5,7 @@ Page({
   data: {
     cartList: [],
     isSelectAll: true,
-    totalPrice: 0,
+    totalPrice: 0.00,
     totalCounter: 0
   },
   onLoad() {
@@ -80,12 +80,12 @@ Page({
       }
     }
 
-    // console.log(counter, totalPrice)
+    // console.log(counter, totalPrice.toFixed(4))
 
     // 2.修改数据
     this.setData({
       totalCounter: counter,
-      totalPrice: totalPrice
+      totalPrice: totalPrice.toFixed(4)
     })
   }
 })

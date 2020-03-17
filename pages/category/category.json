@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "menu":"./childComps/menu/menu",
+    "content":"./childComps/content/content"
+
+  },
+  "navigationBarTitleText": "商品分类"
+
 }

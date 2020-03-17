@@ -57,9 +57,17 @@
 			"current": -1,
 			"list": [
 				{
+					"id": 0,
+					"name": "pages/category/category",
+					"pathName": "pages/category/category",
+					"query": "",
+					"scene": null
+				},
+				{
 					"id": -1,
-					"name": "pages/detail",
-					"pathName": "pages/detail/detail",
+					"name": "pages/category/categor",
+					"pathName": "pages/profile/profile",
+					"query": "",
 					"scene": null
 				}
 			]

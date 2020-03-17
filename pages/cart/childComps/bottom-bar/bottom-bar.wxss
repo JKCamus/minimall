@@ -31,7 +31,7 @@
   width: 200rpx;
   height: 88rpx;
   line-height: 88rpx;
-  background: #ff4500;
+  background: #ff5777;
   color: #fff;
   text-align: center;
 }
