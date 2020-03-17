@@ -4,6 +4,9 @@ import {
 } from "./config.js"
 
 function request(options) {
+    wx.showLoading({
+        title: '官人再等等...'
+    })
     return new Promise((resolve, reject) => {
         wx.request({
             url: baseUrl + options.url,
@@ -13,7 +16,10 @@ function request(options) {
             success: function (res) {
                 resolve(res.data)
             },
-            fail: reject
+            fail: reject,
+            complete: res => {
+                wx.hideLoading()
+            }
 
         })
     })
